@@ -1,5 +1,11 @@
 {
   "name": "react-a11y-exercise",
+  "description": "This project is a hands-on exercise for improving accessibility in React applications.",
+  "author": {
+    "name": "Amirhossein Alibakhshi",
+    "email": "amirhosseinalibakhshi@gmail.com",
+    "url": "https://amirhosseinalibakhshi.com"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
