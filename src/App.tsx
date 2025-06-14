@@ -4,7 +4,7 @@ import "./App.css";
 import { EditModal, Preview, Row, Toast } from "./components/index.ts";
 
 /**
- * This project is a simple accessibility excercise. search for @todo occurences in the project for hints.
+ * This project is a simple accessibility exercise. search for @todo occurences in the project for hints.
  *
  * @todo Make the app accessible. search for other todos for hints.
  *
@@ -13,7 +13,7 @@ import { EditModal, Preview, Row, Toast } from "./components/index.ts";
  */
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const [toastMessage, setToastMessasge] = useState<null | string>(null);
+  const [toastMessage, setToastMessage] = useState<null | string>(null);
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
 
@@ -25,16 +25,27 @@ function App() {
     if (savedProfile) setImage(savedProfile);
   }, []);
 
+  /**
+   * Displays a toast notification with the given message.
+   * The toast automatically dismisses after 3 seconds.
+   *
+   * @param {string} message - The message to display in the toast
+   */
   const showToast = (message: string) => {
     if (toastMessage !== null) return;
 
-    setToastMessasge(message);
+    setToastMessage(message);
 
     setTimeout(() => {
-      setToastMessasge(null);
+      setToastMessage(null);
     }, 3000);
   };
 
+  /**
+   * Updates the user profile information and saves it to localStorage.
+   *
+   * @param {{ name: string; image: string }} data - The user profile data
+   */
   const submitForm = ({ name, image }: { name: string; image: string }) => {
     setName(name);
     setImage(image);
@@ -44,6 +55,9 @@ function App() {
     showToast("Data updated successfully");
   };
 
+  /**
+   * Clears the user profile information from localStorage.
+   */
   const clear = () => {
     localStorage.removeItem("user_name");
     localStorage.removeItem("user_profile");

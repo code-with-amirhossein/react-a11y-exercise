@@ -1,7 +1,6 @@
 import jsLint from "@eslint/js";
 import commentsPlugin from "eslint-plugin-eslint-comments";
 import importPlugin from "eslint-plugin-import";
-
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 
 import { config, configs as tsLintConfigs } from "typescript-eslint";
