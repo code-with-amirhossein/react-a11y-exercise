@@ -1,0 +1,10 @@
+.toast {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: green;
+  color: white;
+  padding: 1rem;
+  border-radius: 10rem;
+}
